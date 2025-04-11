@@ -27,5 +27,9 @@ app.use(
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/task", taskRouter);
 
+app.get("/", (req, res) => {
+  res.send("Nice working");
+});
+
 app.use(errorMiddleware);
 export default app;
